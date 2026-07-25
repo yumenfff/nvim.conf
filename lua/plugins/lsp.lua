@@ -10,7 +10,6 @@ return {
 				capabilities = capabilities,
 			})
 
-			-- Ruff дублирует диагностику с nvim-lint, отключаем именно линтинг у LSP
 			vim.lsp.config("ruff", {
 				init_options = {
 					settings = {
@@ -19,7 +18,6 @@ return {
 				},
 			})
 
-			-- Pyright по умолчанию ругается на неиспользуемые импорты/переменные, тоже дублирует ruff
 			vim.lsp.config("pyright", {
 				settings = {
 					python = {
