@@ -1,6 +1,15 @@
 -- Leader
 vim.g.mapleader = " "
 
+-- open config
+vim.cmd("nmap <leader>c :e ~/.config/nvim/<cr>")
+
+-- paste without overwriting
+vim.keymap.set("v", "p", "P")
+
+-- redo
+vim.keymap.set("n", "U", "<C-r>")
+
 --  To normal mode
 vim.keymap.set("i", "jk", "<Esc>")
 
@@ -56,7 +65,5 @@ vim.keymap.set("n", "<leader>d", function()
 	end
 end)
 
--- Others
-vim.keymap.set("n", "<esc>", function()
-	vim.cmd("noh")
-end)
+-- clear search highlighting
+vim.keymap.set("n", "<Esc>", ":nohlsearch<cr>")

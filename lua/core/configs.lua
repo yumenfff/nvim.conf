@@ -2,6 +2,12 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- search ignoring case
+vim.opt.ignorecase = true
+
+-- disable "ignorecase" option if the search pattern contains upper case characters
+vim.opt.smartcase = true
+
 -- Mouse
 vim.opt.mouse = "a"
 vim.opt.mousefocus = true
